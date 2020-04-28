@@ -14,22 +14,26 @@ public class KongaTest {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.konga.com/");
-        Thread.sleep(1000);
 
-        // maximize the window
+        Thread.wait(5000);
+
         driver.manage().window().maximize();
 
         System.out.println(driver.getTitle());System.out.println(driver.getTitle());
-        driver.get("https://www.konga.com/account/login");
-        driver.findElement(By.xpath("//input[@id='username']")).sendKeys("");
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("");
-        driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div/div/div/div[1]/form/div[3]/button")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-       
+        driver.findElement(By.id("https://www.konga.com/account/login?return_url=/")).click();
+
+        driver.findElement(By.id("Email or phone")).sendKeys("08037532136");
+
+        driver.findElement(By.id=("Enter your password")).sendKeys("kongatest");
+
+        driver.findElement(By.id("Next")).click();
+
     }
+
     public static void main(String args[]) throws InterruptedException {
         KongaTest test = new KongaTest();
-                   test.setUp();
+        test.setUp();
     }
-}
+
