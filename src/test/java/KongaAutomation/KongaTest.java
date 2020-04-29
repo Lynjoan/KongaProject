@@ -41,6 +41,13 @@ public class KongaTest {
 
         driver.findElement(By.id("https://www.konga.com/product/tecno-pop2-f-b1f-dual-sim-16gb-rom-beauty-camera-face-unlock-fingerprint-black-4327429"));
 
+        //add to cart
+        driver.findElement(By.id("Add To Cart")).click();
+
+        driver.findElement(By.id("My Cart"));
+
+        driver.findElement(By.id("increment")).click();
+
 
 
 
