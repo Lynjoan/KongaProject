@@ -15,7 +15,7 @@ public class KongaTest {
         driver = new ChromeDriver();
         driver.get("https://www.konga.com/");
 
-        Thread.wait(5000);
+        Thread.sleep(5000);
 
         driver.manage().window().maximize();
 
@@ -24,16 +24,28 @@ public class KongaTest {
 
         driver.findElement(By.id("https://www.konga.com/account/login?return_url=/")).click();
 
-        driver.findElement(By.id("Email or phone")).sendKeys("08037532136");
+        driver.findElement(By.id("Email or phone")).sendKeys("");
 
-        driver.findElement(By.id=("Enter your password")).sendKeys("kongatest");
+        driver.findElement(By.id("Enter your password")).sendKeys("");
 
         driver.findElement(By.id("Next")).click();
 
-    }
+        // category and subcategory
 
+        driver.findElements(By.id("https://www.konga.com/category/konga-fashion-1259")).click();
+
+        driver. findElements(By.id(https://www.konga.com/category/konga-fashion-1259?menu=Konga%20Fashion%20%3E%20Women%27s%20Fashion));
+
+
+
+
+
+
+
+
+
+    }
     public static void main(String args[]) throws InterruptedException {
         KongaTest test = new KongaTest();
         test.setUp();
     }
-
