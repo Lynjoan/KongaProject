@@ -48,6 +48,10 @@ public class KongaTest {
 
         driver.findElement(By.id("increment")).click();
 
+        //checkout
+        driver.findElement(By.id("https://www.konga.com/checkout/complete-order"));
+
+
 
 
 
