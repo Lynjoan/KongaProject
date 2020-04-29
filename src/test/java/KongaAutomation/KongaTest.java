@@ -28,13 +28,13 @@ public class KongaTest {
 
         driver.findElement(By.id("Enter your password")).sendKeys("");
 
-        driver.findElement(By.id("Next")).click();
+        driver.findElement(By.id("Continue")).click();
 
         // category and subcategory
 
         driver.findElements(By.id("https://www.konga.com/category/konga-fashion-1259"));
 
-        driver.findElements(By.id(https://www.konga.com/category/konga-fashion-1259?menu=Konga%20Fashion%20%3E%20Women%27s%20Fashion));
+        driver.findElements(By.id("Women's Fashion"));
 
         //Search
         driver.findElements(By.id("https://www.konga.com/search?search=detergent?mobile_menu=open"));
@@ -51,15 +51,30 @@ public class KongaTest {
         //checkout
         driver.findElement(By.id("https://www.konga.com/checkout/complete-order"));
 
+        //Payment
+        driver.findElement(By.id("https://www.konga.com/account/login?return_url=/"));
 
+        driver.findElement(By.id("Email or phone")).sendKeys("");
 
+        driver.findElement(By.id("Enter your password")).sendKeys("");
 
+        driver.findElement(By.id("Continue")).click();
 
+        driver.findElement(By.id("selectPaymentMethod")).click();
 
+        driver.findElement(By.id("Continue to Pay")).click();
 
+        driver.findElement(By.id("dashboard-card__button Card")).click();
 
+        driver.findElement(By.id("card-number")).sendKeys("5001231564337721756");
 
+        driver.findElement(By.id("expiry")).sendKeys("08/00");
 
+        driver.findElement(By.id("cvv")).sendKeys("123");
+
+        driver.findElement(By.id("card-pin-new")).sendKeys("");
+
+        driver.findElement(By.id("validateCardForm")).click();
 
     }
     public static void main(String args[]) throws InterruptedException {
