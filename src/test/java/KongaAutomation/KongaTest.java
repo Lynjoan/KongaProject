@@ -22,7 +22,7 @@ public class KongaTest {
         System.out.println(driver.getTitle());System.out.println(driver.getTitle());
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        driver.findElement(By.id("https://www.konga.com/account/login?return_url=/")).click();
+        driver.findElement(By.id("https://www.konga.com/account/login?return_url=/"));
 
         driver.findElement(By.id("Email or phone")).sendKeys("");
 
@@ -32,9 +32,15 @@ public class KongaTest {
 
         // category and subcategory
 
-        driver.findElements(By.id("https://www.konga.com/category/konga-fashion-1259")).click();
+        driver.findElements(By.id("https://www.konga.com/category/konga-fashion-1259"));
 
-        driver. findElements(By.id(https://www.konga.com/category/konga-fashion-1259?menu=Konga%20Fashion%20%3E%20Women%27s%20Fashion));
+        driver.findElements(By.id(https://www.konga.com/category/konga-fashion-1259?menu=Konga%20Fashion%20%3E%20Women%27s%20Fashion));
+
+        //Search
+        driver.findElements(By.id("https://www.konga.com/search?search=detergent?mobile_menu=open"));
+
+        driver.findElement(By.id("https://www.konga.com/product/tecno-pop2-f-b1f-dual-sim-16gb-rom-beauty-camera-face-unlock-fingerprint-black-4327429"));
+
 
 
 
