@@ -11,7 +11,7 @@ public class KongaTest {
     private WebDriver driver;
 
     public void setUp() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "resources//chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.konga.com/");
 
